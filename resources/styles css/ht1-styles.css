@@ -1,0 +1,621 @@
+/* =============================== LOADER ================================ */
+
+.Loader-Background {
+  display: flex;
+  position: fixed;
+  background: #a6a6a6ca;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.triangles {
+  transform: translate(-50%, -50%);
+  height: 81px;
+  width: 90px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.tri {
+  position: absolute;
+  animation: pulse_51 750ms ease-in infinite;
+  border-top: 27px solid #000000;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 0px;
+}
+
+.tri.invert {
+  border-top: 0px;
+  border-bottom: 27px solid #000000;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.tri:nth-child(1) {
+  left: 30px;
+}
+
+.tri:nth-child(2) {
+  left: 15px;
+  top: 27px;
+  animation-delay: -125ms;
+}
+
+.tri:nth-child(3) {
+  left: 30px;
+  top: 27px;
+}
+
+.tri:nth-child(4) {
+  left: 45px;
+  top: 27px;
+  animation-delay: -625ms;
+}
+
+.tri:nth-child(5) {
+  top: 54px;
+  animation-delay: -250ms;
+}
+
+.tri:nth-child(6) {
+  top: 54px;
+  left: 15px;
+  animation-delay: -250ms;
+}
+
+.tri:nth-child(7) {
+  top: 54px;
+  left: 30px;
+  animation-delay: -375ms;
+}
+
+.tri:nth-child(8) {
+  top: 54px;
+  left: 45px;
+  animation-delay: -500ms;
+}
+
+.tri:nth-child(9) {
+  top: 54px;
+  left: 60px;
+  animation-delay: -500ms;
+}
+
+@keyframes pulse_51 {
+  0% {
+    opacity: 1;
+  }
+
+  16.666% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ================================ BODY ================================= */
+
+body {
+  background: linear-gradient(110deg, #0a0e3e, #6a0296, #770000);
+  font-family: 'Rubik', sans-serif;
+  color: #000000;
+  background-size: cover;
+  margin: 0;
+  font-size: 100%;
+  display: grid;
+  min-height: 100vh;
+  gap: 22px;
+  grid-template-rows: auto auto auto auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* =============================== HEADER ================================ */
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background: rgb(18, 18, 18);
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+}
+
+.header-1 {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  border-bottom: 2px solid #ffffff;
+}
+
+.header-content h1 {
+  padding: 20px;
+  display: flex;
+  transition: all .5s;
+}
+
+.header-content h1:hover {
+  text-shadow: 1px 1px 10px #ffffffa9;
+  transition: all .5s;
+}
+
+.header-content nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.header-content nav li {
+  display: inline-block;
+  width: auto;
+  padding: 6px;
+  margin: 4px auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 1px solid transparent;
+  transition: all .5s;
+}
+
+.header-content nav li:hover {
+  border-bottom: 1px solid #fff;
+  transition: all .5s;
+}
+
+.social-icons a {
+  display: inline-block;
+  top: 90px;
+  padding: 0px 20px 0px 0px;
+  border: none;
+}
+
+/* =============================== SECTION-Home ================================ */
+
+.Section-Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-1 {
+  background: #fff;
+  padding: 30px;
+  height: 100%;
+  width: 86%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 5px 15px 0px #000000c4;
+}
+
+/* ============================= IN-HOME-1 ============================== */
+
+.in-conteiner-1 {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================= IN-HOME-2 ============================== */
+
+.in-conteiner-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#parallax {
+  position: relative;
+  width: 90%;
+  height: 68vh;
+  background-image: url('/resources/images/tmv-back-layer.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  z-index: 0;
+}
+
+/* =============================== SECTION-1 ================================ */
+
+.Section-1 {
+  background: #0a0e3e;
+  padding: 40px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container-2 {
+  background: #fff;
+  height: auto;
+  width: 86%;
+  box-shadow: 0px 5px 15px 0px #ffffffc4;
+}
+
+/* ============================= IN-CONTENT-1 ============================== */
+
+.in-conteiner-1_2 {
+  display: flex;
+  background: #201a2e;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.in-conteiner-1_2 h2 {
+  padding: 10px 0px 20px 0px;
+}
+
+/* ============================= IN-CONTENT-2 ============================== */
+
+.in-conteiner-2_2 {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================== SECTION-2 ================================ */
+
+.Section-2 {
+  background: #0a0e3e;
+  padding: 60px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-3 {
+  background: #fff;
+  height: auto;
+  width: 86%;
+  box-shadow: 0px 5px 15px 0px #ffffffc4;
+}
+
+/* ============================= IN-CONTENT-1 ============================== */
+
+.in-conteiner-1_3 {
+  display: flex;
+  background: #201a2e;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.in-conteiner-1_3 h2 {
+  padding: 10px 0px 20px 0px;
+}
+
+/* ============================= IN-CONTENT-2 ============================== */
+
+.in-conteiner-2_3 {
+  display: flex;
+  padding: 20px 20px 0px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+/* ============================= IN-CONTENT-3 ============================== */
+
+.in-conteiner-3_3 {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========================== REGISTER-CONTAINER =========================== */
+
+.register-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  width: 80%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0px 5px 15px 0px #000000c4;
+}
+
+.in-register-container-1 {
+  padding: 20px;
+  background: #2c1f6c;
+  color: #ffffff;
+}
+
+.in-register-container-2 {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 56% 1fr;
+}
+
+.text-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text-register h3 {
+  padding: 20px;
+}
+
+.campus-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ================================ REGISTER ================================ */
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 200px;
+  padding: 7px 70px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  border: 7px solid #5e4dcd;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+  box-shadow: 0px 5px 15px 0px #000000c4;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: 30px 10px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  box-shadow: 0px 5px 15px 0px #000000c4;
+}
+
+.button--submit:hover {
+  background-color: #5e5dcd;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
+
+/* ================================ FOOTER ================================ */
+
+footer {
+  background: rgb(18, 18, 18);
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-content {
+  width: 90%;
+  height: auto;
+  border-top: 2px solid #ffffff;
+  text-align: center;
+}
+
+.footer-content h5 {
+  padding: 10px;
+}
+
+/* ========================= WHATSAPP-FLOATING ============================ */
+
+.whatsapp-float {
+  position: fixed;
+  top: 89%;
+  left: 1%;
+  z-index: 6;
+}
+
+/* ================================ IMAGES ================================ */
+
+.TMV-home {
+  position: absolute;
+  width: 26%;
+  height: auto;
+  filter: drop-shadow(4px 4px 4px rgb(255, 255, 255));
+  z-index: 1;
+}
+
+.whatsapp-float img {
+  height: 60px;
+  transition: all .5s;
+}
+
+.whatsapp-float img:hover {
+  filter: drop-shadow(4px 4px 14px rgb(255, 255, 255));
+  transition: all .5s;
+  translate: 0px -20px;
+}
+
+/* ============================== MEDIA QUERY ============================== */
+
+@media screen and (max-width: 1320px) {
+  .register-container {
+    width: 98%;
+  }
+
+  .in-register-container-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-register {
+    display: inline-block;
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 734px) {
+
+  .header-content {
+    display: inline-block;
+  }
+
+  .header-content h1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  .header-content nav {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .container-1 {
+    padding: 0;
+    grid-template-columns: 1fr;
+    display: inline-block;
+  }
+
+  .container-2 {
+    padding: 0;
+    grid-template-columns: 1fr;
+    display: inline-block;
+  }
+
+  .container-3 {
+    padding: 0;
+    grid-template-columns: 1fr;
+    display: inline-block;
+  }
+
+  .in-conteiner-1 {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  #parallax {
+    display: none;
+  }
+
+  .TMV-home {
+    position: relative;
+    padding: 0;
+    display: inline-block;
+    width: 50%;
+    min-width: 300px;
+  }
+
+  .footer-content {
+    width: 90%;
+    font-size: 15px;
+    padding: 10px;
+    border-top: 2px solid #ffffff;
+  }
+
+  .footer-content h5 {
+    padding: 0;
+    width: 100%;
+  }
+
+  .register-container {
+    width: 98%;
+  }
+
+  .in-register-container-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-register {
+    display: inline-block;
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input {
+    padding: 3px 10px;
+  }
+
+  .button--submit {
+    padding: 26px 4px;
+  }
+}
