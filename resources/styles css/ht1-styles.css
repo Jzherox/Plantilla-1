@@ -244,7 +244,7 @@ header {
   position: relative;
   width: 90%;
   height: 68vh;
-  background-image: url('/resources/images/tmv-back-layer.png');
+  background-image: url('resources/images/tmv-back-layer.png');
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
